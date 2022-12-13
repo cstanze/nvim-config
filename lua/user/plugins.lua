@@ -41,9 +41,8 @@ packer.init {
   },
 }
 
--- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
+  -- My base plugins here
   use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
   use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" } -- Useful lua functions used by lots of plugins
   use { "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" } -- Autopairs, integrates with both cmp and treesitter
@@ -100,6 +99,50 @@ return packer.startup(function(use)
   use { "mfussenegger/nvim-dap", commit = "6b12294a57001d994022df8acbe2ef7327d30587" }
   use { "rcarriga/nvim-dap-ui", commit = "1cd4764221c91686dcf4d6b62d7a7b2d112e0b13" }
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
+
+  -- Other plugins (not part of the base setup)
+  use { "n-shift/scratch.nvim" }
+  use { "Pocco81/auto-save.nvim" }
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {}
+      require("user.keymaps")
+    end
+  }
+  use {
+    "rcarriga/nvim-notify",
+    config = function()
+      require("notify").setup({
+        stages = "slide"
+      })
+      vim.notify = require "notify"
+    end
+  }
+  -- Deprecated by neovim/neovim#19243 but I use Neovim 8.0 which doesn't have this
+  use {
+    "luukvbaal/stabilize.nvim",
+    config = function() require("stabilize").setup() end
+  }
+
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {}
+    end
+  }
+
+  use {
+    "karb94/neoscroll.nvim",
+    config = function()
+      require("neoscroll").setup {}
+    end
+  }
+
+  use { "ellisonleao/glow.nvim" }
+
+  use { "github/copilot.vim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -24,6 +24,21 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
+-- File Associations
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.zen" },
+  callback = function ()
+    vim.cmd [[ set filetype=yaml ]]
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.xm", "*.x", "*.xmm", "*.l.mm" },
+  callback = function ()
+    vim.cmd [[ set filetype=objc ]]
+  end
+})
+
 vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 
 vim.api.nvim_create_autocmd({ "VimResized" }, {
