@@ -10,8 +10,8 @@ local servers = {
   "gopls",
   "clangd",
   "rust_analyzer",
-  "elixir_ls",
-  "erlang_ls"
+  "elixirls",
+  "erlangls"
 }
 
 local settings = {
