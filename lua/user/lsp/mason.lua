@@ -9,7 +9,9 @@ local servers = {
 	"yamlls",
   "gopls",
   "clangd",
-  "rust_analyzer"
+  "rust_analyzer",
+  "elixir_ls",
+  "erlang_ls"
 }
 
 local settings = {
