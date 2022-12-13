@@ -12,7 +12,7 @@ Remove or move your current `nvim` config directory (usually at `~/.config/nvim`
 
 Run `nvim` and wait for the plugins to be installed.
 
-**Note:** First time you may get an error. Just ignore them and press enter, it will say nvim-ts-context-commentstring is not instlaled but that is fine just close and reopen nvim and everything should be fine
+**Note:** First time you may get an error. Just ignore them and press enter, it will say nvim-ts-context-commentstring is not installed but that is fine just close and reopen nvim and everything should be fine
 
 **Note (part-2):** You will also notice treesitter pullig in a bunch of parsers the next time you open Neovim. This is normal behaviour.
 
