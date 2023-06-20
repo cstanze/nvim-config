@@ -7,7 +7,7 @@ end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
-M.capabilities.offsetEncoding = "utf-8"
+M.capabilities.offsetEncoding = { "utf-8" }
 M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
 
 M.setup = function()
@@ -80,6 +80,12 @@ M.on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
+
+  -- vim.notify(client.name)
+
+  -- if client.name == "rust_analyzer" then
+    -- client.server_capabilities.documentFormattingProvider = false
+  -- end
 
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")

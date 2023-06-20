@@ -41,7 +41,8 @@ wk.register({
       f = { "<cmd>Telescope find_files<CR>", "Find files" },
       t = { "<cmd>Telescope live_grep<CR>", "Live grep" },
       p = { "<cmd>Telescope projects<CR>", "Search projects" },
-      b = { "<cmd>Telescope buffers<CR>", "Search buffers" }
+      b = { "<cmd>Telescope buffers<CR>", "Search buffers" },
+      c = { "<cmd>Telescope colorscheme<CR>", "Select colorscheme" }
     },
     a = { "<cmd>ASToggle<CR>", "Toggle auto save" },
     m = { "<cmd>lua print(vim.api.nvim_get_mode()['mode'])", "Print current mode" },

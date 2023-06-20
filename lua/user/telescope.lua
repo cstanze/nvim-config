@@ -13,6 +13,12 @@ telescope.setup {
     path_display = { "smart" },
     file_ignore_patterns = { ".git/", "node_modules" },
 
+    pickers = {
+      colorscheme = {
+        enable_preview = true
+      }
+    },
+
     mappings = {
       i = {
         ["<Down>"] = actions.cycle_history_next,

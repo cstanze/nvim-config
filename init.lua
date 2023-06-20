@@ -1,3 +1,5 @@
+-- vim.lsp.set_log_level("debug")
+
 require "user.impatient"
 require "user.options"
 -- require "user.keymaps"
@@ -20,3 +22,9 @@ require "user.indentline"
 require "user.alpha"
 require "user.lsp"
 require "user.dap"
+
+-- :verbose set tabstop?
+-- ^ this shows the last set. i disable certain recommended styles here:
+vim.g.rust_recommended_style = 0
+vim.g.python_recommended_style = 0
+
