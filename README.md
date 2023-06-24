@@ -1,4 +1,4 @@
-# The GigaChad config
+# cstanze's neovim config
 
 A damn good config with a BUNCH of things I use daily. Neovim is a daily driver for me so I might as well write a good config to make it usable in even over long development sessions...
 
@@ -31,7 +31,7 @@ And more...
 
 ## Caveats
 
-There may be some deprecated plugins but mainly because I prefer Neovim 8.0 for stability. So far its only `neoscroll.nvim` but if there are any other deprecated plugins or any piece of deprecated code, please submit an issue and I'll look into fixing it.
+There may be some deprecated plugins but mainly because I prefer Neovim 0.8.0 for stability. So far its only `neoscroll.nvim` but if there are any other deprecated plugins or any piece of deprecated code, please submit an issue and I'll look into fixing it.
 
 ## Extra configuration
 
